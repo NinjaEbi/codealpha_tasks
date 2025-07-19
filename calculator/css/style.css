@@ -1,0 +1,129 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f2f5, #dfe6e9);
+  color: #333;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Calculator Box */
+.calculator {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  width: 100%;
+}
+
+/* Display */
+#display {
+  width: 100%;
+  padding: 15px;
+  font-size: 24px;
+  text-align: right;
+  border: none;
+  background: #f1f2f6;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: #2f3542;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  padding: 16px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: #dfe4ea;
+  color: #2f3542;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: #a4b0be;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* History panel */
+.history {
+  background: #ffffff;
+  padding: 25px;
+  max-height: 420px;
+  overflow-y: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 320px;
+}
+
+.history h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  text-align: center;
+  color: #2d3436;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.history li {
+  background: #f1f2f6;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #2f3542;
+  word-wrap: break-word;
+}
+
+.history button {
+  width: 100%;
+  background: #ff4757;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.history button:hover {
+  background: #e84118;
+}
