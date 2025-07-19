@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Responsive Image Gallery</h1>
+    <button id="themeToggle" aria-label="Toggle Theme">🌙</button>
+    <div id="filters">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="nature">Nature</button>
+      <button data-filter="city">City</button>
+      <button data-filter="people">People</button>
+    </div>
+  </header>
+
+  <main class="gallery" id="gallery">
+    <figure data-category="nature"><img src="https://picsum.photos/id/1018/600/400" alt="Mountain River"><figcaption>Mountain River</figcaption></figure>
+    <figure data-category="nature"><img src="https://picsum.photos/id/1024/600/400" alt="Forest Path"><figcaption>Forest Path</figcaption></figure>
+    <figure data-category="nature"><img src="https://picsum.photos/id/1056/600/400" alt="Sunny Meadow"><figcaption>Sunny Meadow</figcaption></figure>
+    <figure data-category="people"><img src="https://picsum.photos/id/1011/600/400" alt="New York Skyline"><figcaption>New York Skyline</figcaption></figure>
+    <figure data-category="city"><img src="https://picsum.photos/id/1060/600/400" alt="Old Town Street"><figcaption>Old Town Street</figcaption></figure>
+    <figure data-category="city"><img src="https://picsum.photos/id/84/600/400/" alt="Night City Lights"><figcaption>Night City Lights</figcaption></figure>
+    <figure data-category="people"><img src="https://picsum.photos/id/1005/600/400" alt="Portrait Smile"><figcaption>Portrait Smile</figcaption></figure>
+    <figure data-category="nature"><img src="https://picsum.photos/id/1002/600/400" alt="Traveler in Desert"><figcaption>Traveler in Desert</figcaption></figure>
+    <figure data-category="people"><img src="https://picsum.photos/id/1001/600/400" alt="Girl with Camera"><figcaption>Girl with Camera</figcaption></figure>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="prev" aria-label="Previous image">&#10094;</button>
+    <img src="" alt="Lightbox Image" id="lightbox-img" />
+    <button class="next" aria-label="Next image">&#10095;</button>
+    <button class="close" aria-label="Close lightbox">&#x2715;</button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
